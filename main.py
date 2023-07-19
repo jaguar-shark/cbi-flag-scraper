@@ -32,5 +32,3 @@ def flagCheck(tries, url):
     return flagColor
 
 print(flagCheck(5,cbi_URL))
-
-
