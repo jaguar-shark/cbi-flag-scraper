@@ -8,7 +8,6 @@ cbi_URL = "https://api.community-boating.org/api/flag"
 
 # Function for calling CBI api and returning the flag color
 def flagCheck(tries, url):
-    print("Checking flag status for CBI...")
     for i in range(tries):
         try: 
             # Receive content of URL and store color character
@@ -35,8 +34,9 @@ def flagCheck(tries, url):
 
 
 def main():
-    print("Intializing CBI Flag Scrapper:")
+    print("\nIntializing CBI Flag Check: \n")
     while True:
+        print("Checking flag status for CBI...")
         print("Flag color is: " + flagCheck(5,cbi_URL))
         time.sleep(5)
 
