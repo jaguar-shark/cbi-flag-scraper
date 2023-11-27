@@ -17,7 +17,7 @@ def flagCheck(tries, url):
             flagColor = string[18]
             # Check which color code the API provides and assign it a full color word string
             if flagColor == "Y":
-                    return "Yellow"
+                return "Yellow"
             elif flagColor == "R":
                 return "Red"
             elif flagColor == "G":
