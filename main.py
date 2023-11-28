@@ -1,4 +1,3 @@
-import os
 import time
 import requests
 from bs4 import BeautifulSoup
@@ -6,10 +5,11 @@ from bs4 import BeautifulSoup
 # API request to community boating to get flag color
 cbi_URL = "https://api.community-boating.org/api/flag"
 
-# Function for calling CBI api and returning the flag color
+
+# Function for calling Community Boating Inc. API and returning the flag color
 def flagCheck(tries, url):
     for i in range(tries):
-        try: 
+        try:
             # Receive content of URL and store color character
             # cbi_URL example content: var FLAG_COLOR = "G"
             page = requests.get(url)
@@ -30,15 +30,16 @@ def flagCheck(tries, url):
                 continue
             raise
         break
-    return flagColor 
+    return flagColor
 
 
 def main():
     print("\nIntializing CBI Flag Check: \n")
     while True:
         print("Checking flag status for CBI...")
-        print("Flag color is: " + flagCheck(5,cbi_URL))
+        print("Flag color is: " + flagCheck(5, cbi_URL))
         time.sleep(5)
+
 
 if __name__ == "__main__":
     main()
